@@ -1,0 +1,103 @@
+#title{
+    color: rgb(34, 15, 15);
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+
+body{
+    font-family: monospace;
+    font-size: 1.2rem;
+    background-color: azure;
+    
+}
+p{
+    text-align: center;
+    position: relative;
+    top: 80px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    
+}
+
+
+form{
+    background-color: rgb(215, 248, 248);
+    padding: 25px;
+    margin: 90px 200px;
+    border-radius: 20px;
+
+}
+#formcontrol{
+    text-align: center;
+    line-height: 3rem;
+    display: block;
+    width: 100%; 
+}
+
+
+
+#name, #email{
+    width: 300px;
+    height: 25px;
+    border-radius: 25px;
+    line-height: 3rem;
+    position: relative;
+    
+    
+    
+    
+}
+#number{
+    width: 60px;
+    height: 30px;
+    
+    
+    
+    
+}   
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+margin: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+#email-label, #name-label, #number-label{
+    position: relative;
+    left: 450px;
+    font-size: 28px;
+    line-height: 45px;
+    
+}
+
+#dropdown{
+    position: relative;
+    left: 300px;
+    top: -75px;
+}
+
+.input-radio{
+    font-size: 25px;
+
+    
+    
+}
+
+button{
+    position: relative;
+    left: 450px;
+}
+
+

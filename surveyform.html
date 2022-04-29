@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="surveycss.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1 id="title">My firts Survey Form</h1>
+    <p id="description">BOOTCAMP CHOSING SURVEY</p>
+    <form id="survey-form">
+        <div id="formcontrol">
+            
+            <label for="name" id="name-label">Name</label>
+                <input 
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name here"
+                    required/>
+        </div>
+
+        
+        <div id="formcontrol">
+            <label for="email" id="email-label">E-mail</label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your e-mail here"
+                    required>
+        </div>
+
+        <div id="formcontrol">
+            <label for="number" id="number-label">Age (optinal)</label> 
+                <input
+                    id="number"
+                    style="number"
+                    type="number"
+                    min="0" max="100">
+                
+                
+        </div>
+
+        <div id="formcontrol">
+            <label for="dropdown"><h3>Which option best describes your current role?:</h3></label>
+            
+            <select name="selectid" id="dropdown">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Student</option>
+                <option value="cat">Employed</option>
+                <option value="hamster">Self-Employed</option>
+                <option value="parrot">Unemployed</option>
+                <option value="spider">Rich</option>
+                <option value="goldfish">Homeless</option>
+            </select>
+        </div>
+
+        <div id="formcontrol">
+            <h3 id="radioh3id">Which of these schools would you like to enroll in?</h3>
+
+            <label>
+                <input
+                    value="generala"
+                    name="okulsecimi"
+                    type="radio"
+                    class="input-radio">
+                    General Assemnbly
+            </label>
+
+            <label>
+                <input
+                    value="nucamp"
+                    name="okulsecimi"
+                    type="radio"
+                    class="input-radio">
+                    Nucamp
+            </label>
+
+            <label>
+                <input
+                    value="berkeley"
+                    name="okulsecimi"
+                    type="radio"
+                    class="input-radio">
+                    Berkeley Extantion
+            </label>
+
+            <label>
+                <input
+                    value="freecodecamp"
+                    name="okulsecimi"
+                    type="radio"
+                    class="input-radio">
+                    freeCodeCamp
+            </label>
+        </div>
+
+        <div id="formcontrol">
+            
+                <h3 id="checkboxh3id">Which days are best days for you to study ?</h3>
+            
+            <label>
+                <input name="gunler"
+                value="monday"
+                type="checkbox"
+                class="input-checkbox">Monday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="tuesday"
+                type="checkbox"
+                class="input-checkbox">Tuesday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="wednesday"
+                type="checkbox"
+                class="input-checkbox">Wednesday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="thursday"
+                type="checkbox"
+                class="input-checkbox">Thursday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="friday"
+                type="checkbox"
+                class="input-checkbox">Friday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="saturday"
+                type="checkbox"
+                class="input-checkbox">Saturday
+            </label>
+            
+            <label>
+                <input name="gunler"
+                value="sunday"
+                type="checkbox"
+                class="input-checkbox">Sunday
+            </label>
+            </div>
+        
+
+        <div id="formcontrol">
+            <h3 id="texareaid">Tell about yourself</h3>
+
+            <textarea
+                id="yourself-text-area"
+                class="input-text-area"
+                placeholder="Type something..."></textarea>
+
+        </div>
+
+        
+    </form>
+</body>
+</html>
