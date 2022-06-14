@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Game</title>
+
+    <style>
+        img {
+            position: absolute;
+            cursor: pointer;
+        }
+        div {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+        }
+        #rightSide{
+            left: 500px;
+            border-left: 1px solid;
+        }
+        .disp{
+            display: inline;
+            
+        }
+        h1{
+            margin-top: 20px;
+            margin-left: 400px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #asd{
+            margin-left: 390px;
+        }
+    </style>
+</head>
+<body onload="generateFaces()">
+    <h1>Matching Game</h1>
+    <p id="asd">Click on the extra smiling face on the left.</p>
+    <p class="disp">Score : <p class="disp" id="counter"></p></p>
+
+    <div id="lelftSide"></div>
+    <div id="rightSide"></div>
+
+
+
+    <script>
+        let numberOfFaces = 5;
+        const theLeftSide = document.getElementById("lelftSide");
+        const theRightSide = document.getElementById("rightSide");
+    //console.log(theLeftSide);
+    
+        let counter = 0;
+        document.getElementById("counter").innerHTML = counter;
+    
+    
+        function generateFaces() {
+        for (let i= 0; i < numberOfFaces; i++) {
+            let face = document.createElement("img")
+            face.src = "smile.png"
+            theLeftSide.appendChild(face);
+            
+            let randomTop = Math.floor(Math.random() * 400);
+            let randomLeft = Math.floor(Math.random() * 400);
+            face.style.top = randomTop + 'px';
+            face.style.left = randomLeft + 'px';
+
+        }  
+        const leftSideImages = theLeftSide.cloneNode(true);
+        //console.log(leftSideImages);
+        let removed = leftSideImages.removeChild(leftSideImages.lastChild);
+        console.log(removed);
+        theRightSide.appendChild(leftSideImages);
+
+        theLeftSide.lastChild.addEventListener("click", nextLevel);
+        document.body.addEventListener("click", gameOver);
+
+        
+
+    }
+        function nextLevel(event) {
+        event.stopPropagation();
+        numberOfFaces += 5;
+        counter += 1;
+        document.getElementById("counter").innerHTML = counter;
+
+
+        while (theLeftSide.firstChild){
+            theLeftSide.removeChild(theLeftSide.firstChild);
+        }
+        while (theRightSide.firstChild){
+            theRightSide.removeChild(theRightSide.firstChild);
+        }
+        
+        
+        generateFaces();
+    }
+        function gameOver() {
+        theLeftSide.lastChild.removeEventListener("click", gameOver);
+        document.body.removeEventListener("click", nextLevel);
+        alert("Game Over");
+        while (theLeftSide.firstChild){
+            theLeftSide.removeChild(theLeftSide.firstChild);
+        }
+        while (theRightSide.firstChild){
+            theRightSide.removeChild(theRightSide.firstChild);
+        }
+        numberOfFaces = 5;
+        generateFaces();
+        counter = 0;
+        document.getElementById("counter").innerHTML = counter;
+    }
+    </script>
+</body>
+</html>
